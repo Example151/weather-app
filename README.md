@@ -1,11 +1,90 @@
-# React + TypeScript + Vite
+# Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern weather application built with React, TypeScript, and Vite. This app allows users to check the current weather conditions for any city worldwide.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Real-time weather data from OpenWeatherMap API
+- Search weather by city name
+- Display temperature, humidity, and "feels like" temperature
+- Responsive design with beautiful UI
+- Dynamic weather icons
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Node.js (version 18 or higher)
+- npm (comes with Node.js)
+
+## Environment Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/trae-app.git
+   cd trae-app
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm ci
+   ```
+
+3. Create a `.env` file in the root directory:
+   ```bash
+   cp .env.example .env
+   ```
+
+4. Get your API key:
+   - Sign up for a free account at [OpenWeatherMap](https://openweathermap.org/)
+   - Generate an API key from your account dashboard
+   - Add your API key to the `.env` file:
+     ```
+     VITE_WEATHER_API_KEY=your_api_key_here
+     ```
+
+## Development
+
+To start the development server:
+
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:5173/trae-app/`
+
+## Building for Production
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Deployment
+
+This project is configured for automatic deployment to GitHub Pages using GitHub Actions. When you push to the `main` branch, the application will be automatically built and deployed.
+
+The deployment workflow:
+1. Pushes to the `main` branch trigger the GitHub Actions workflow
+2. The workflow builds the application
+3. The built files are deployed to the `gh-pages` branch
+4. The application is served from GitHub Pages
+
+## Tech Stack
+
+- React 18
+- TypeScript
+- Vite
+- Tailwind CSS
+- Axios
+- Hero Icons
 
 ## Expanding the ESLint configuration
 
