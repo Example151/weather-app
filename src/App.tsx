@@ -21,7 +21,7 @@ function App() {
   const [error, setError] = useState('');
   const [city, setCity] = useState('London');
 
-  const API_KEY = 'f7607f0b8704ecfa315b8490e48bfdf2'; // You'll need to add your OpenWeatherMap API key here
+  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
   
   useEffect(() => {
     const fetchWeather = async () => {
